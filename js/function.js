@@ -293,205 +293,200 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-window.addEventListener("load", () => {
-    const tl = gsap.timeline();
+// window.addEventListener("load", () => {
+//     const tl = gsap.timeline();
 
-    // Banner image bounce-in (existing)
-    tl.from(".slide-bg", {
-      y: -200,          
-      opacity: 0,
-      duration: 1.5,
-      ease: "bounce.out"
-    })
-    // Banner text fade/zoom in (existing)
-    .from(".banner-content h1", {
-      scale: 0.8,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out"
-    }, "-=0.5");
+//     tl.from(".slide-bg", {
+//       y: -200,          
+//       opacity: 0,
+//       duration: 1.5,
+//       ease: "bounce.out"
+//     })
 
-    // Register ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger);
+//     .from(".banner-content h1", {
+//       scale: 0.8,
+//       opacity: 0,
+//       duration: 1,
+//       ease: "power3.out"
+//     }, "-=0.5");
 
-    // =====================================
-    // 1. BANNER EXIT ANIMATION
-    // =====================================
-    gsap.to(".banner-wrapper", {
-      yPercent: -50,   // move only halfway instead of -100
-      opacity: 0.6, 
-      scale: 0.9,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: ".about-us",
-        start: "top bottom",
-        end: "top 5%",  // 👈 finish animation earlier
-        scrub: 1.5
-      }
-    });
+//     // Register ScrollTrigger
+//     gsap.registerPlugin(ScrollTrigger);
 
-    // =====================================
-    // 2. ABOUT US SECTION ENTRANCE
-    // =====================================
-    
-    // About section staggered entrance - using from() instead of set()
-    gsap.from(".about-us-images", {
-      opacity: 0,
-      y: 100,
-      duration: 1.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".about-us-images",
-        start: "top 85%",
-        toggleActions: "play none none reverse"
-      }
-    });
 
-    gsap.from(".about-us-content", {
-      opacity: 0,
-      y: 100,
-      duration: 1.2,
-      delay: 0.3,  // Stagger effect
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".about-us-content",
-        start: "top 85%",
-        toggleActions: "play none none reverse"
-      }
-    });
+//     gsap.to(".banner-wrapper", {
+//       yPercent: -50,   
+//       opacity: 0.6, 
+//       scale: 0.9,
+//       ease: "power2.inOut",
+//       scrollTrigger: {
+//         trigger: ".about-us",
+//         start: "top bottom",
+//         end: "top 5%",  
+//         scrub: 1.5
+//       }
+//     });
 
-    // =====================================
-    // 3. ABOUT IMAGE ANIMATIONS
-    // =====================================
-    gsap.from(".about-image img", {
-      scale: 0.8,
-      opacity: 0,
-      rotation: -10,
-      duration: 1.5,
-      ease: "elastic.out(1, 0.8)",
-      scrollTrigger: {
-        trigger: ".about-image",
-        start: "top 80%",
-        toggleActions: "play none none reverse"
-      }
-    });
 
-    // =====================================
-    // 4. SKILL BOX SLIDE IN
-    // =====================================
-    gsap.from(".about-skill-box", {
-      x: 200,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".about-skill-box",
-        start: "top 80%",
-        toggleActions: "play none none reverse"
-      }
-    });
+//     gsap.from(".about-us-images", {
+//       opacity: 0,
+//       y: 100,
+//       duration: 1.2,
+//       ease: "power3.out",
+//       scrollTrigger: {
+//         trigger: ".about-us-images",
+//         start: "top 85%",
+//         toggleActions: "play none none reverse"
+//       }
+//     });
 
-    // =====================================
-    // 5. TEAM PHOTOS CASCADE
-    // =====================================
-    gsap.from(".satisfy-client-image", {
-      scale: 0,
-      rotation: 360,
-      opacity: 0,
-      duration: 0.8,
-      stagger: {
-        amount: 1.5,
-        from: "start"
-      },
-      ease: "back.out(2)",
-      scrollTrigger: {
-        trigger: ".expert-team-box",
-        start: "top 85%",
-        toggleActions: "play none none reverse"
-      }
-    });
+//     gsap.from(".about-us-content", {
+//       opacity: 0,
+//       y: 100,
+//       duration: 1.2,
+//       delay: 0.3, 
+//       ease: "power3.out",
+//       scrollTrigger: {
+//         trigger: ".about-us-content",
+//         start: "top 85%",
+//         toggleActions: "play none none reverse"
+//       }
+//     });
 
-    // =====================================
-    // 6. TEXT CONTENT ANIMATIONS
-    // =====================================
-    
-    // "About us" title
-    gsap.from(".section-title h3", {
-      opacity: 0,
-      x: -50,
-      duration: 0.8,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".section-title h3",
-        start: "top 85%",
-        toggleActions: "play none none reverse"
-      }
-    });
 
-    // Main heading
-    gsap.from(".section-title h2", {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".section-title h2",
-        start: "top 80%",
-        toggleActions: "play none none reverse"
-      }
-    });
+//     gsap.from(".about-image img", {
+//       scale: 0.8,
+//       opacity: 0,
+//       rotation: -10,
+//       duration: 1.5,
+//       ease: "elastic.out(1, 0.8)",
+//       scrollTrigger: {
+//         trigger: ".about-image",
+//         start: "top 80%",
+//         toggleActions: "play none none reverse"
+//       }
+//     });
 
-    // Paragraph reveal with typewriter effect
-    gsap.from(".section-title p", {
-      clipPath: "inset(0 100% 0 0)",
-      duration: 2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".section-title p",
-        start: "top 75%",
-        toggleActions: "play none none reverse"
-      }
-    });
+//     gsap.from(".about-skill-box", {
+//       x: 200,
+//       opacity: 0,
+//       duration: 1,
+//       ease: "power3.out",
+//       scrollTrigger: {
+//         trigger: ".about-skill-box",
+//         start: "top 80%",
+//         toggleActions: "play none none reverse"
+//       }
+//     });
 
-    // =====================================
-    // 7. BUTTON ANIMATION
-    // =====================================
-    gsap.from(".about-us-btn", {
-      scale: 0,
-      opacity: 0,
-      y: 30,
-      duration: 0.8,
-      ease: "bounce.out",
-      scrollTrigger: {
-        trigger: ".about-us-btn",
-        start: "top 85%",
-        toggleActions: "play none none reverse"
-      }
-    });
 
-    // =====================================
-    // 8. SKILL BOX TITLE ANIMATION
-    // =====================================
-    gsap.from(".about-skill-title h3", {
-      opacity: 0,
-      scale: 0.8,
-      duration: 1,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".about-skill-title",
-        start: "top 80%",
-        toggleActions: "play none none reverse"
-      }
-    });
-});
+//     gsap.from(".satisfy-client-image", {
+//       scale: 0,
+//       rotation: 360,
+//       opacity: 0,
+//       duration: 0.8,
+//       stagger: {
+//         amount: 1.5,
+//         from: "start"
+//       },
+//       ease: "back.out(2)",
+//       scrollTrigger: {
+//         trigger: ".expert-team-box",
+//         start: "top 85%",
+//         toggleActions: "play none none reverse"
+//       }
+//     });
 
-// Your existing owl carousel (keep this)
-document.addEventListener("DOMContentLoaded", function () {
-    $(".banner-carousel").owlCarousel({
-      items: 1,
-      loop: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      smartSpeed: 800
-    });
+
+//     gsap.from(".section-title h3", {
+//       opacity: 0,
+//       x: -50,
+//       duration: 0.8,
+//       ease: "power2.out",
+//       scrollTrigger: {
+//         trigger: ".section-title h3",
+//         start: "top 85%",
+//         toggleActions: "play none none reverse"
+//       }
+//     });
+
+//     gsap.from(".section-title h2", {
+//       opacity: 0,
+//       y: 50,
+//       duration: 1,
+//       ease: "power2.out",
+//       scrollTrigger: {
+//         trigger: ".section-title h2",
+//         start: "top 80%",
+//         toggleActions: "play none none reverse"
+//       }
+//     });
+
+//     gsap.from(".section-title p", {
+//       clipPath: "inset(0 100% 0 0)",
+//       duration: 2,
+//       ease: "power2.out",
+//       scrollTrigger: {
+//         trigger: ".section-title p",
+//         start: "top 75%",
+//         toggleActions: "play none none reverse"
+//       }
+//     });
+
+
+//     gsap.from(".about-us-btn", {
+//       scale: 0,
+//       opacity: 0,
+//       y: 30,
+//       duration: 0.8,
+//       ease: "bounce.out",
+//       scrollTrigger: {
+//         trigger: ".about-us-btn",
+//         start: "top 85%",
+//         toggleActions: "play none none reverse"
+//       }
+//     });
+
+//     gsap.from(".about-skill-title h3", {
+//       opacity: 0,
+//       scale: 0.8,
+//       duration: 1,
+//       ease: "power3.out",
+//       scrollTrigger: {
+//         trigger: ".about-skill-title",
+//         start: "top 80%",
+//         toggleActions: "play none none reverse"
+//       }
+//     });
+// });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     $(".banner-carousel").owlCarousel({
+//       items: 1,
+//       loop: true,
+//       autoplay: true,
+//       autoplayTimeout: 5000,
+//       smartSpeed: 800
+//     });
+// });
+
+
+
+
+const overlayBlock = document.querySelector(".overlay-block");
+
+window.addEventListener("scroll", () => {
+  const rect = overlayBlock.getBoundingClientRect();
+  const viewportHeight = window.innerHeight;
+
+  // progress: 0 = overlay bottom is at viewport bottom, 1 = overlay top reaches top
+  let progress = (viewportHeight - rect.top) / viewportHeight;
+  progress = Math.min(Math.max(progress, 0), 1);
+
+  // interpolate border-radius and scale
+  const radius = 960 - (959 * progress); // 960 → 1
+  const scale = 0.65 + (0.35 * progress); // 0.65 → 1
+
+  overlayBlock.style.borderRadius = `${radius}px ${radius}px 0 0`;
+  overlayBlock.style.transform = `scale(${scale})`;
 });

@@ -17,10 +17,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&amp;display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
 
     <!-- Bootstrap Css -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -105,129 +108,35 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <div class="banner-wrapper">
-    <div class="banner-carousel owl-carousel">
-      <div class="banner-slide">
-        <div class="slide-bg" style="background-image:url('images/banner-2.png')"></div>
-        <div class="banner-content">
-          <h1 class="text-white">Your Oceanfront <br> Legacy Awaits.</h1>
-        </div>
-      </div>
+    <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
 
-      <div class="banner-slide">
-        <div class="slide-bg" style="background-image:url('images/banner-3.png')"></div>
-        <div class="banner-content">
-          <h1 class="text-white">Unparalleled Views, <br> Unrivaled Amenities.</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-
-    <!-- Hero Section End -->
-
-    <!-- About Us Section Start -->
-    <div class="about-us">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <!-- About Us Images Start -->
-                    <div class="about-us-images">
-                        <!-- About Us Image Start -->
-                        <div class="about-image">
-                            <figure class="image-anime reveal">
-                                <img src="images/about-us-image.jpg" alt="">
-                            </figure>
-                        </div>
-                        <!-- About Us Image End -->
-
-                        <!-- About Skill Box Start -->
-                        <div class="about-skill-box">
-                            <div class="about-skill-title">
-                                <h3 class="text-white">25 years of excellence in global real estate consulting</h3>
-                            </div>
-
-                        </div>
-                        <!-- About Skill Box End -->
-
-                        <!-- Expert Team Box Start -->
-                        <div class="expert-team-box">
-                            <!-- Satisfy Client Images Start -->
-                            <div class="satisfy-client-images">
-                                <div class="satisfy-client-image">
-                                    <figure class="image-anime">
-                                        <img src="images/author-1.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="satisfy-client-image">
-                                    <figure class="image-anime">
-                                        <img src="images/author-2.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="satisfy-client-image">
-                                    <figure class="image-anime">
-                                        <img src="images/author-3.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="satisfy-client-image">
-                                    <figure class="image-anime">
-                                        <img src="images/author-4.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="satisfy-client-image">
-                                    <figure class="image-anime">
-                                        <img src="images/author-5.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="satisfy-client-image add-more">
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                            </div>
-                            <!-- Satisfy Client Images End -->
-
-                            <!-- Satisfy Client Content Start -->
-                            <div class="satisfy-clients-content">
-                                <p>Our expert team</p>
-                            </div>
-                            <!-- Satisfy Client Content End -->
-                        </div>
-                        <!-- Expert Team Box End -->
-                    </div>
-                    <!-- About Us Images End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- About Us Content Start -->
-                    <div class="about-us-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">About us</h3>
-                            <h2 class="wow fadeInUp" data-cursor="-opaque" data-wow-delay="0.2s">Transforming Real
-                                Estate Vision into Reality</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.4s">Since 2002, FAF has steadily grown into a
-                                multi-faceted organization with 25 years of combined corporate experience across real
-                                estate, food, and automobile industries worldwide.
-
-                                In 2023, we launched operations in India, establishing our registered office in
-                                Mangalore, Karnataka. Backed by seasoned professionals in design, construction, finance,
-                                and operations, we play a pivotal role in helping clients secure the right
-                                opportunities.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-
-
-                        <!-- About Us Button Start -->
-                        <div class="about-us-btn wow fadeInUp" data-wow-delay="0.8s">
-                            <a href="" class="btn-default text-white">Learn More About</a>
-                        </div>
-                        <!-- About Us Button End -->
-                    </div>
-                    <!-- About Us Content End -->
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="background-image: url('images/banner-2.png');">
+                <div class="carousel-caption text-white">
+                    <h1>Your Oceanfront <br> Legacy Awaits.</h1>
                 </div>
             </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item" style="background-image: url('images/banner-3.png');">
+                <div class="carousel-caption text-white">
+                    <h1>Unparalleled Views, <br> Unrivaled Amenities.</h1>
+                </div>
+            </div>
+
         </div>
     </div>
-    <!-- About Us Section End -->
+
+    <!-- Overlay Section (Scroll-Based) -->
+    <section class="overlay-section">
+        <div class="overlay-block">
+            <div class="overlay-text">
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Our Services Section Start -->
     <div class="our-services">
@@ -1158,6 +1067,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // smooth slow animation
+            once: true,     // animate only once
+            easing: 'ease-in-out'
+        });
+    </script>
 
 </body>
 
