@@ -256,221 +256,88 @@
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Initialize Slick Carousel on gallery-slider
-  $('.gallery-slider').slick({
-      slidesToShow: 4,          // Show 4 at a time
-      slidesToScroll: 1,        // Scroll 1 at a time
-      autoplay: true,           // Enable auto scroll
-      autoplaySpeed: 2500,      // 2.5s interval
-      speed: 800,               // Slide animation speed
-      infinite: true,           // Loop infinitely
-      arrows: true,             // Show next/prev arrows (set false if not needed)
-      dots: false,              // Disable dots (set true if you want dots)
-      pauseOnHover: true,
-      pauseOnFocus: false,
-      responsive: [
-          { breakpoint: 992, settings: { slidesToShow: 2 } },  // 2 slides on tablet
-          { breakpoint: 576, settings: { slidesToShow: 1 } }   // 1 slide on mobile
-      ]
-  });
 
-  // Lightbox options
-  lightbox.option({
-      resizeDuration: 200,
-      wrapAround: true,
-      disableScrolling: true,
-      fadeDuration: 200,
-      imageFadeDuration: 200
-  });
-
-  // Pause carousel when lightbox opens
-  $(document).on('click', '[data-lightbox]', function () {
-      $('.gallery-slider').slick('slickPause');
-  });
-});
+// gallery 
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxClose = document.getElementById('lightbox-close');
 
-// window.addEventListener("load", () => {
-//     const tl = gsap.timeline();
+            console.log('Gallery items found:', galleryItems.length);
 
-//     tl.from(".slide-bg", {
-//       y: -200,          
-//       opacity: 0,
-//       duration: 1.5,
-//       ease: "bounce.out"
-//     })
+            // Open lightbox
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    console.log('Gallery item clicked:', index);
+                    
+                    const imageSrc = this.getAttribute('data-src');
+                    const imageAlt = this.querySelector('img').getAttribute('alt');
+                    
+                    console.log('Opening lightbox with image:', imageSrc);
+                    
+                    // Set image source
+                    lightboxImage.src = imageSrc;
+                    lightboxImage.alt = imageAlt;
+                    
+                    // Show lightbox
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    
+                    console.log('Lightbox should be visible now');
+                });
+            });
 
-//     .from(".banner-content h1", {
-//       scale: 0.8,
-//       opacity: 0,
-//       duration: 1,
-//       ease: "power3.out"
-//     }, "-=0.5");
+            // Close lightbox function
+            function closeLightbox() {
+                console.log('Closing lightbox');
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                
+                setTimeout(() => {
+                    lightboxImage.src = '';
+                }, 300);
+            }
 
-//     // Register ScrollTrigger
-//     gsap.registerPlugin(ScrollTrigger);
+            // Close button event
+            lightboxClose.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Close button clicked');
+                closeLightbox();
+            });
+            
+            // Click outside to close
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    console.log('Clicked outside image');
+                    closeLightbox();
+                }
+            });
 
+            // ESC key to close
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    console.log('ESC key pressed');
+                    closeLightbox();
+                }
+            });
 
-//     gsap.to(".banner-wrapper", {
-//       yPercent: -50,   
-//       opacity: 0.6, 
-//       scale: 0.9,
-//       ease: "power2.inOut",
-//       scrollTrigger: {
-//         trigger: ".about-us",
-//         start: "top bottom",
-//         end: "top 5%",  
-//         scrub: 1.5
-//       }
-//     });
-
-
-//     gsap.from(".about-us-images", {
-//       opacity: 0,
-//       y: 100,
-//       duration: 1.2,
-//       ease: "power3.out",
-//       scrollTrigger: {
-//         trigger: ".about-us-images",
-//         start: "top 85%",
-//         toggleActions: "play none none reverse"
-//       }
-//     });
-
-//     gsap.from(".about-us-content", {
-//       opacity: 0,
-//       y: 100,
-//       duration: 1.2,
-//       delay: 0.3, 
-//       ease: "power3.out",
-//       scrollTrigger: {
-//         trigger: ".about-us-content",
-//         start: "top 85%",
-//         toggleActions: "play none none reverse"
-//       }
-//     });
-
-
-//     gsap.from(".about-image img", {
-//       scale: 0.8,
-//       opacity: 0,
-//       rotation: -10,
-//       duration: 1.5,
-//       ease: "elastic.out(1, 0.8)",
-//       scrollTrigger: {
-//         trigger: ".about-image",
-//         start: "top 80%",
-//         toggleActions: "play none none reverse"
-//       }
-//     });
-
-//     gsap.from(".about-skill-box", {
-//       x: 200,
-//       opacity: 0,
-//       duration: 1,
-//       ease: "power3.out",
-//       scrollTrigger: {
-//         trigger: ".about-skill-box",
-//         start: "top 80%",
-//         toggleActions: "play none none reverse"
-//       }
-//     });
-
-
-//     gsap.from(".satisfy-client-image", {
-//       scale: 0,
-//       rotation: 360,
-//       opacity: 0,
-//       duration: 0.8,
-//       stagger: {
-//         amount: 1.5,
-//         from: "start"
-//       },
-//       ease: "back.out(2)",
-//       scrollTrigger: {
-//         trigger: ".expert-team-box",
-//         start: "top 85%",
-//         toggleActions: "play none none reverse"
-//       }
-//     });
-
-
-//     gsap.from(".section-title h3", {
-//       opacity: 0,
-//       x: -50,
-//       duration: 0.8,
-//       ease: "power2.out",
-//       scrollTrigger: {
-//         trigger: ".section-title h3",
-//         start: "top 85%",
-//         toggleActions: "play none none reverse"
-//       }
-//     });
-
-//     gsap.from(".section-title h2", {
-//       opacity: 0,
-//       y: 50,
-//       duration: 1,
-//       ease: "power2.out",
-//       scrollTrigger: {
-//         trigger: ".section-title h2",
-//         start: "top 80%",
-//         toggleActions: "play none none reverse"
-//       }
-//     });
-
-//     gsap.from(".section-title p", {
-//       clipPath: "inset(0 100% 0 0)",
-//       duration: 2,
-//       ease: "power2.out",
-//       scrollTrigger: {
-//         trigger: ".section-title p",
-//         start: "top 75%",
-//         toggleActions: "play none none reverse"
-//       }
-//     });
-
-
-//     gsap.from(".about-us-btn", {
-//       scale: 0,
-//       opacity: 0,
-//       y: 30,
-//       duration: 0.8,
-//       ease: "bounce.out",
-//       scrollTrigger: {
-//         trigger: ".about-us-btn",
-//         start: "top 85%",
-//         toggleActions: "play none none reverse"
-//       }
-//     });
-
-//     gsap.from(".about-skill-title h3", {
-//       opacity: 0,
-//       scale: 0.8,
-//       duration: 1,
-//       ease: "power3.out",
-//       scrollTrigger: {
-//         trigger: ".about-skill-title",
-//         start: "top 80%",
-//         toggleActions: "play none none reverse"
-//       }
-//     });
-// });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     $(".banner-carousel").owlCarousel({
-//       items: 1,
-//       loop: true,
-//       autoplay: true,
-//       autoplayTimeout: 5000,
-//       smartSpeed: 800
-//     });
-// });
-
-
+            // Test button to manually open lightbox (for debugging)
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'T' || e.key === 't') {
+                    console.log('Test key pressed - opening lightbox');
+                    lightboxImage.src = 'images/FAF/who-we-are-1.jpg';
+                    lightbox.classList.add('active');
+                }
+            });
+        });
 
 
 const overlayBlock = document.querySelector(".overlay-block");
@@ -490,3 +357,18 @@ window.addEventListener("scroll", () => {
   overlayBlock.style.borderRadius = `${radius}px ${radius}px 0 0`;
   overlayBlock.style.transform = `scale(${scale})`;
 });
+
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+
+
+

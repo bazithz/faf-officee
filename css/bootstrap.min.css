@@ -2426,6 +2426,7 @@ progress {
     border: var(--bs-border-width) solid var(--bs-border-color);
     border-radius: var(--bs-border-radius);
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+    
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -4348,15 +4349,15 @@ fieldset:disabled .btn {
     flex-wrap: wrap;
     padding-left: 0;
     margin-bottom: 0;
-    list-style: none
+    list-style: none;
 }
 
 .nav-link {
     display: block;
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-    font-size: var(--bs-nav-link-font-size);
-    font-weight: var(--bs-nav-link-font-weight);
-    color: var(--bs-nav-link-color);
+    font-size: 20px;
+    font-weight: 900px;
+    color: white;
     text-decoration: none;
     background: 0 0;
     border: 0;
@@ -4516,8 +4517,17 @@ fieldset:disabled .btn {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0));
+    height: 100px;
+    transition: background 0.4s ease, backdrop-filter 0.4s ease;
     padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x)
 }
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.452) !important;
+    backdrop-filter: blur(10px);
+    height: 100px;
+  }
 
 .navbar>.container,
 .navbar>.container-fluid,
@@ -4558,7 +4568,7 @@ fieldset:disabled .btn {
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
-    list-style: none
+    list-style: none;
 }
 
 .navbar-nav .nav-link.active,
@@ -7986,7 +7996,7 @@ fieldset:disabled .btn {
 
 .fixed-top {
     position: fixed;
-    top: 0;
+    top: 50;
     right: 0;
     left: 0;
     z-index: 1030
@@ -13885,3 +13895,4 @@ fieldset:disabled .btn {
         display: none !important
     }
 }
+
