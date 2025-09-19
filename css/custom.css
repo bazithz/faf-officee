@@ -30,93 +30,105 @@ body {
 
 
 
-.carousel-item {
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
-	position: relative;
-  }
-  
-  .carousel-caption {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	text-align: center;
-  }
-  
-  .carousel-caption h1 {
-	font-size: 3rem;
-	font-weight: bold;
-	color: white;
-  }
-  
-  /* Overlay Section */
-  .overlay-section {
-	position: relative;
-	height: 100vh; /* section height */
-	margin-top: -100vh; /* start overlapping the banner */
-  }
-  
-  .overlay-block {
-	position: relative;
-	margin-top: 840px;	
-	width: 100%;
-	height: 100%;
-	background-image: url('../images/FAF/realestatepic.png');
-	background-size: cover;
-	background-position: center;
-	border-radius: 960px 960px 0 0; /* start folded */
-	transform: scale(0.65);
-	z-index: 2;
-	transition: border-radius 0.1s linear, transform 0.1s linear;
-  }
-  
-  .overlay-text {
-	position: absolute;
-	top: 50%;
-	left: 24%;
-	transform: translate(-50%, -50%);
-	text-align: left;
-	color: black;
-	max-width: 600px;
-	padding: 20px;
-  }
-  
-  .overlay-text h2 {
-	font-size: 2.5rem;
-	font-weight: bold;
-	margin-bottom: 1rem;
-  }
-  
-  .overlay-text h2 em {
-	font-style: italic;
-	font-weight: normal;
-  }
-  
-  .overlay-text p {
-	font-size: 1rem;
-	line-height: 1.6;
-	margin-bottom: 2rem;
-  }
-  
-  .discover-btn {
-	background: transparent;
-	border: 2px solid rgb(0, 0, 0);
-	color: rgb(0, 0, 0);
-	padding: 30px 30px;
-	border-radius: 30px;
-	font-weight: bold;
-	letter-spacing: 1px;
-	cursor: pointer;
-	transition: 0.3s;
-  }
-  
-  .discover-btn:hover {
-	background: #ffe4b4;
-	color: black;
-  }
-  
+ .banner-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+        }
 
+        .carousel-item {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+
+        .carousel-caption h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Spacer to allow scrolling */
+        .scroll-spacer {
+            height: 100vh;
+            position: relative;
+            z-index: 0;
+        }
+
+        /* Overlay Section */
+        .overlay-section {
+            position: relative;
+            height: 100vh;
+            z-index: 2;
+        }
+
+        .overlay-block {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/FAF/realestatepic.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 960px 960px 0 0;
+            transform: scale(0.65);
+            transition: border-radius 0.1s linear, transform 0.1s linear;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 24%;
+            transform: translate(-50%, -50%);
+            text-align: left;
+            color: black;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .overlay-text h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .overlay-text h2 em {
+            font-style: italic;
+            font-weight: normal;
+        }
+
+        .overlay-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .discover-btn {
+            background: transparent;
+            border: 2px solid rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
+            padding: 30px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .discover-btn:hover {
+            background: #ffe4b4;
+            color: black;
+        }
 
 
 

@@ -340,25 +340,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
 
-const overlayBlock = document.querySelector(".overlay-block");
+ const overlayBlock = document.querySelector(".overlay-block");
+        
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.pageYOffset;
+            const viewportHeight = window.innerHeight;
+            const bannerWrapper = document.querySelector('.banner-wrapper');
+            
+            // Calculate progress based on scroll position
+            let progress = Math.max(0, scrollTop / viewportHeight);
+            progress = Math.min(progress, 1);
+            
+            // Interpolate border-radius and scale for overlay animation
+            const radius = 960 - (959 * progress); // 960 → 1
+            const scale = 0.65 + (0.35 * progress); // 0.65 → 1
+            
+            overlayBlock.style.borderRadius = `${radius}px ${radius}px 0 0`;
+            overlayBlock.style.transform = `scale(${scale})`;
+            
+            // Hide banner when overlay animation is complete (progress = 1)
+            if (progress >= 1) {
+                bannerWrapper.style.display = 'none';
+            } else {
+                bannerWrapper.style.display = 'block';
+            }
+        });
 
-window.addEventListener("scroll", () => {
-  const rect = overlayBlock.getBoundingClientRect();
-  const viewportHeight = window.innerHeight;
 
-  // progress: 0 = overlay bottom is at viewport bottom, 1 = overlay top reaches top
-  let progress = (viewportHeight - rect.top) / viewportHeight;
-  progress = Math.min(Math.max(progress, 0), 1);
-
-  // interpolate border-radius and scale
-  const radius = 960 - (959 * progress); // 960 → 1
-  const scale = 0.65 + (0.35 * progress); // 0.65 → 1
-
-  overlayBlock.style.borderRadius = `${radius}px ${radius}px 0 0`;
-  overlayBlock.style.transform = `scale(${scale})`;
-});
-
-
+		
 const navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
