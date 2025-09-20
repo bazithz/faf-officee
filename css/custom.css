@@ -6809,3 +6809,10 @@ header.main-header .header-sticky.active {
 	}
 }
 
+@media (min-width: 500px) and (max-width: 769px) {
+	.overlay-text{
+		left: 34%;
+	}
+}
+
+
