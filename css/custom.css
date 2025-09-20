@@ -2131,6 +2131,7 @@ header.main-header .header-sticky.active {
 
 .testimonial-header {
 	border-bottom: 1px solid var(--divider-color);
+	height: 430px;
 }
 
 .testimonials-rating {
