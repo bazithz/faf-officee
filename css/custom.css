@@ -6779,4 +6779,33 @@ header.main-header .header-sticky.active {
 }
 
 
+@media  (min-width: 950px) and (max-width: 1200px) {
+	.overlay-text{
+    left: 30%;
+	}
+	.overlay-text h2{
+		font-size: 2rem;
+	}
+	.overlay-text p {
+		font-size: .8rem;
+	}
+	.discover-btn{
+		padding: 20px;
+	}
+}
+@media (max-width: 500px) {
+	.overlay-text{
+		left: 35%;
+	}
+	.overlay-text h2{
+		font-size: 1rem;
+	}
+	.overlay-text p {
+		font-size: .6rem;
+	}
+	.discover-btn{
+		padding: 10px;
+		font-size: 13px;
+	}
+}
 
