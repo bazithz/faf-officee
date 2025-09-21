@@ -5302,7 +5302,7 @@ fieldset:disabled .btn {
 }
 
 .accordion-item:first-of-type>.accordion-header .accordion-button {
-    border-top-left-radius: var(--bs-accordion-inner-border-radius);
+    border-top-left-radius:     ;
     border-top-right-radius: var(--bs-accordion-inner-border-radius)
 }
 
@@ -5380,12 +5380,7 @@ fieldset:disabled .btn {
     padding-left: var(--bs-breadcrumb-item-padding-x)
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
-    float: left;
-    padding-right: var(--bs-breadcrumb-item-padding-x);
-    color: var(--bs-breadcrumb-divider-color);
-    content: var(--bs-breadcrumb-divider, "https://html.awaikenthemes.com/")
-}
+
 
 .breadcrumb-item.active {
     color: var(--bs-breadcrumb-item-active-color)
