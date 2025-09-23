@@ -1679,6 +1679,7 @@ header.main-header .header-sticky.active {
 
 .what-we-do {
 	padding: 80px 0;
+	background-color: #EFEFEF;
 }
 
 .what-we-do-box-1,
@@ -3072,7 +3073,7 @@ header.main-header .header-sticky.active {
 }
 
 .page-services .services-item {
-	background: var(--secondary-color) url('../images/service-item-bg.png');
+	background-color: #EFEFEF;
 	background-repeat: no-repeat;
 	background-position: top left;
 	background-size: auto;
