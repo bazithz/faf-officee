@@ -1848,14 +1848,12 @@ header.main-header .header-sticky.active {
 }
 
 .why-choose-us::before {
-	background-image: url('../images/section-bg-robot-3.png');
 	top: -20px;
 	right: -20px;
 	animation: movestyle1 7s linear infinite alternate;
 }
 
 .why-choose-us::after {
-	background-image: url('../images/section-bg-robot-2.png');
 	bottom: -50px;
 	left: -50px;
 	animation: movestyle3 7s linear infinite alternate;
@@ -4269,7 +4267,7 @@ header.main-header .header-sticky.active {
 }
 
 .contact-us-form {
-	background: var(--secondary-color) url('../images/contact-us-form-bg.png');
+	background: #efefef;
 	background-repeat: repeat;
 	background-position: center center;
 	background-size: cover;
@@ -4291,8 +4289,9 @@ header.main-header .header-sticky.active {
 	outline: none;
 }
 
+
 .contact-form .form-control::placeholder {
-	color: var(--text-color);
+	color: black;
 }
 
 .contact-form .btn-default {
