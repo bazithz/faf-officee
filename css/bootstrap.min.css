@@ -5285,7 +5285,6 @@ fieldset:disabled .btn {
     outline: 0;
     box-shadow: var(--bs-accordion-btn-focus-box-shadow)
 }
-
 .accordion-header {
     margin-bottom: 0
 }
