@@ -1822,7 +1822,6 @@ header.main-header .header-sticky.active {
 
 .why-choose-us {
 	position: relative;
-	background-image: url('../images/why-choose-us-bg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -3080,6 +3079,27 @@ header.main-header .header-sticky.active {
 	height: calc(100% - 30px);
 	margin-bottom: 30px;
 	padding: 40px;
+}
+
+
+.page-services .services-item .icon-box {
+    width: 80px;              /* adjust size as needed */
+    height: 80px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-services .services-item:hover .icon-box {
+    transform: scale(1.2);    /* pop effect */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* optional glow */
+}
+
+.page-services .services-item .icon-box img {
+    max-width: 60%;           /* fit inside box */
+    height: auto;
 }
 
 .our-testimonials.service-our-testimonials {
