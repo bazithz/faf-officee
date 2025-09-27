@@ -4517,16 +4517,16 @@ fieldset:disabled .btn {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(180deg, rgba(0,0,0,0.85) 15%, rgba(0,0,0,0));
-    height: 120px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0));
+    height: 150px;
     transition: background 0.4s ease, backdrop-filter 0.4s ease;
     padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x)
 }
 
 .navbar.scrolled {
     background: rgba(0, 0, 0, 0.452) !important;
-    backdrop-filter: blur(20px);
-    height: 100px;
+    backdrop-filter: blur(50px);
+    height: 150px;
   }
 
 .navbar>.container,
