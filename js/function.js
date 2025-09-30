@@ -381,3 +381,42 @@ window.addEventListener("scroll", () => {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const servicesItems = document.querySelectorAll('.page-services .services-item');
+    
+    // Initial animation on page load
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all service items
+    servicesItems.forEach(item => {
+        observer.observe(item);
+    });
+    
+    // For scroll-triggered animations (if items are below viewport)
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('animate')) {
+                entry.target.classList.add('scroll-animate');
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px'
+    });
+    
+    servicesItems.forEach(item => {
+        scrollObserver.observe(item);
+    });
+});

@@ -42,26 +42,27 @@
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen">
 </head>
+
 <body>
 
     <!-- Preloader Start -->
-	<!-- <div class="preloader">
+    <!-- <div class="preloader">
 		<div class="loading-container">
 			<div class="loading"></div>
 			<div id="loading-icon"><img src="images/loader.svg" alt=""></div>
 		</div>
 	</div> -->
-	<!-- Preloader End -->
+    <!-- Preloader End -->
 
     <!-- Header Start -->
-	<header class="main-header">
+    <header class="main-header">
         <div>
             <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container-md nav-split">
 
                     <!-- LOGO -->
                     <a class="navbar-brand center-logo mt-4" href="">
-                        <img src="images/FAF/FAF-LOGO.svg" alt="Logo" style="width: 240px;">
+                        <img class="mobile-logo" src="images/FAF/FAF-LOGO.svg" alt="Logo">
                     </a>
 
                     <!-- TOGGLER BUTTON -->
@@ -74,7 +75,7 @@
                     <div class="d-none d-lg-flex w-100 justify-content-between">
                         <ul class="navbar-nav left-nav">
                             <li class="nav-item submenu"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         </ul>
 
                         <ul class="navbar-nav right-nav">
@@ -95,7 +96,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav">
                         <li class="nav-item text-white"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
@@ -103,7 +104,7 @@
             </div>
         </div>
     </header>
-	<!-- Header End -->
+    <!-- Header End -->
 
     <!-- Page Header Start -->
     <div class="page-header bg-section">
@@ -127,88 +128,111 @@
     <!-- Page Header End -->
 
     <!-- Page Services Start -->
+
     <div class="page-services">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-12">
                     <!-- Services Item Start -->
-                    <div class="services-item wow fadeInUp">
+                    <div class="services-item" data-index="0">
                         <div class="icon-box">
                             <img src="images/icon-services-item-1.png" alt="">
                         </div>
                         <div class="services-item-content">
                             <h3><a href="service-single.html">Residential Property Sales</a></h3>
-                            <p>Expert guidance in buying or selling homes, apartments, and villas across Mangalore's prime locations with transparent pricing and legal support.</p>
+                            <p>Expert guidance in buying or selling homes, apartments, and villas across Mangalore's
+                                prime locations with transparent pricing and legal support. Our experienced team assists
+                                with property valuations, market comparisons, and negotiation strategies to ensure you
+                                get the best deal. We provide comprehensive site visits, documentation support, and
+                                post-sale services to make your home buying or selling experience smooth and
+                                hassle-free.</p>
                         </div>
                     </div>
                     <!-- Services Item End -->
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-12">
                     <!-- Services Item Start -->
-                    <div class="services-item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="services-item" data-index="1">
                         <div class="icon-box">
                             <img src="images/icon-services-tab-2.png" alt="">
                         </div>
                         <div class="services-item-content">
                             <h3><a href="service-single.html">Commercial Real Estate</a></h3>
-                            <p>Strategic solutions for office spaces, retail properties, and industrial units with market analysis and investment potential assessment.</p>
+                            <p>Strategic solutions for office spaces, retail properties, and industrial units with
+                                market analysis and investment potential assessment. We help businesses find the perfect
+                                location that aligns with their operational needs and budget requirements. Our team
+                                conducts thorough due diligence, lease negotiations, and provides ongoing support for
+                                expansion or relocation needs, ensuring your commercial real estate decisions drive
+                                business growth.</p>
                         </div>
                     </div>
                     <!-- Services Item End -->
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-12">
                     <!-- Services Item Start -->
-                    <div class="services-item wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="services-item" data-index="2">
                         <div class="icon-box">
                             <img src="images/icon-services-tab-3.png" alt="">
                         </div>
                         <div class="services-item-content">
                             <h3><a href="service-single.html">Property Management</a></h3>
-                            <p>Comprehensive management services including tenant screening, rent collection, maintenance coordination, and financial reporting for property owners.</p>
+                            <p>Comprehensive management services including tenant screening, rent collection,
+                                maintenance coordination, and financial reporting for property owners. We handle
+                                emergency repairs, regular property inspections, and ensure compliance with local
+                                regulations to protect your investment. Our dedicated team maintains transparent
+                                communication with both owners and tenants, providing monthly reports and maximizing
+                                your rental income while minimizing vacancies.</p>
                         </div>
                     </div>
                     <!-- Services Item End -->
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-12">
                     <!-- Services Item Start -->
-                    <div class="services-item wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="services-item" data-index="3">
                         <div class="icon-box">
                             <img src="images/icon-services-tab-4.png" alt="">
                         </div>
                         <div class="services-item-content">
                             <h3><a href="service-single.html">Investment Consulting</a></h3>
-                            <p>Data-driven investment strategies identifying high-growth opportunities in Mangalore's emerging and established neighborhoods.</p>
+                            <p>Data-driven investment strategies identifying high-growth opportunities in Mangalore's
+                                emerging and established neighborhoods. Our analysts provide detailed ROI projections,
+                                risk assessments, and portfolio diversification recommendations tailored to your
+                                financial goals. We monitor market trends, infrastructure developments, and regulatory
+                                changes to help you make informed decisions that maximize returns and build long-term
+                                wealth through real estate investments.</p>
                         </div>
                     </div>
                     <!-- Services Item End -->
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-12">
                     <!-- Services Item Start -->
-                    <div class="services-item wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="services-item" data-index="4">
                         <div class="icon-box">
                             <img src="images/icon-services-tab-5.png" alt="">
                         </div>
                         <div class="services-item-content">
                             <h3><a href="service-single.html">Construction & Development</a></h3>
-                            <p>End-to-end project management from land acquisition to construction oversight, ensuring quality and timely delivery of residential and commercial projects.</p>
+                            <p>End-to-end project management from land acquisition to construction oversight, ensuring
+                                quality and timely delivery of residential and commercial projects.</p>
                         </div>
                     </div>
                     <!-- Services Item End -->
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-12">
                     <!-- Services Item Start -->
-                    <div class="services-item wow fadeInUp" data-wow-delay="1s">
+                    <div class="services-item" data-index="5">
                         <div class="icon-box">
                             <img src="images/icon-services-tab-5.png" alt="">
                         </div>
                         <div class="services-item-content">
                             <h3><a href="service-single.html">Legal & Documentation</a></h3>
-                            <p>Complete legal support including title verification, contract preparation, registration assistance, and dispute resolution for seamless transactions.</p>
+                            <p>Complete legal support including title verification, contract preparation, registration
+                                assistance, and dispute resolution for seamless transactions.</p>
                         </div>
                     </div>
                     <!-- Services Item End -->
@@ -216,9 +240,10 @@
             </div>
         </div>
     </div>
-    <!-- Page Services End -->    
 
-    
+    <!-- Page Services End -->
+
+
 
     <!-- Why Choose Us Section Start -->
     <div class="why-choose-us bg-section">
@@ -230,11 +255,14 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">Why choose us</h3>
-                            <h2 class="wow fadeInUp text-dark" data-wow-delay="0.2s" data-cursor="-opaque">Why clients trust our proven real estate solutions</h2>
-                            <p class="wow fadeInUp text-dark" data-wow-delay="0.4s">Our real estate strategies are built on expertise, experience, and trust helping clients find the right properties, make smart investments, and achieve lasting value</p>
+                            <h2 class="wow fadeInUp text-dark" data-wow-delay="0.2s" data-cursor="-opaque">Why clients
+                                trust our proven real estate solutions</h2>
+                            <p class="wow fadeInUp text-dark" data-wow-delay="0.4s">Our real estate strategies are built
+                                on expertise, experience, and trust helping clients find the right properties, make
+                                smart investments, and achieve lasting value</p>
                         </div>
                         <!-- Section Title End -->
-                        
+
                         <!-- Why Choose Item List Start -->
                         <div class="why-choose-list wow fadeInUp" data-wow-delay="0.6s">
                             <ul>
@@ -274,7 +302,7 @@
             </div>
         </div>
     </div>
-    <!-- Why Choose Us Section End -->    
+    <!-- Why Choose Us Section End -->
 
     <!-- Footer Start -->
     <footer class="main-footer">
@@ -306,7 +334,7 @@
                                 <h3>quick links</h3>
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="about.html">About</a></li>
                                     <li><a href="services.html">Services</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
