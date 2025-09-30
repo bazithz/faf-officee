@@ -1924,7 +1924,7 @@ header.main-header .header-sticky.active {
 .why-choose-cta-box {
 	position: absolute;
 	top: 40%;
-	right: 0;
+	right: 90px;
 	width: 100%;
 	max-width: 200px;
 	background: var(--accent-secondary-color);
