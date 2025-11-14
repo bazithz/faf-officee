@@ -4602,9 +4602,9 @@ fieldset:disabled .btn {
     padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
     font-size: var(--bs-navbar-toggler-font-size);
     line-height: 1;
-    color: var(--bs-navbar-color);
+    color: white;
     background-color: transparent;
-    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+    border: white;
     border-radius: var(--bs-navbar-toggler-border-radius);
     transition: var(--bs-navbar-toggler-transition)
 }
@@ -7691,7 +7691,9 @@ fieldset:disabled .btn {
 .offcanvas-header {
     display: flex;
     align-items: center;
-    padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x)
+    padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+        background: linear-gradient(364deg, #272727 0%, #ffffff 100%);
+
 }
 
 .offcanvas-header .btn-close {
@@ -7708,7 +7710,7 @@ fieldset:disabled .btn {
     flex-grow: 1;
     padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
     overflow-y: auto;
-    background-color: #000;
+    background: linear-gradient(135deg, #272727 0%, #ffffff 100%);
 }
 
 .placeholder {
