@@ -7692,11 +7692,12 @@ fieldset:disabled .btn {
     display: flex;
     align-items: center;
     padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
-        background: linear-gradient(364deg, #272727 0%, #ffffff 100%);
+    background: linear-gradient(300deg, #272727 0%, #ffffff 100%);
 
 }
 
 .offcanvas-header .btn-close {
+    color: white;
     padding: calc(var(--bs-offcanvas-padding-y) * .5) calc(var(--bs-offcanvas-padding-x) * .5);
     margin: calc(-.5 * var(--bs-offcanvas-padding-y)) calc(-.5 * var(--bs-offcanvas-padding-x)) calc(-.5 * var(--bs-offcanvas-padding-y)) auto
 }
