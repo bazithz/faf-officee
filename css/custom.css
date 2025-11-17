@@ -830,6 +830,92 @@ header.main-header .header-sticky.active {
 	color: var(--bg-color);
 }
 
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-left: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(290deg, var(--accent-secondary-color) 0%, var(--accent-color) 100%);
+    color: var(--white-color);
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Social Icons */
+.social-icons-mobile {
+    display: flex;
+    gap: 15px;
+    padding: 0 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.social-icons-mobile a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(290deg, var(--accent-secondary-color) 0%, var(--accent-color) 100%);
+    color: var(--white-color);
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.social-icons-mobile a:hover {
+    transform: scale(1.1);
+}
+
+.social-icon-item {
+    margin: 0 2px !important;
+}
+
+.social-link {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(290deg, var(--accent-secondary-color) 0%, var(--accent-color) 100%);
+    color: var(--white-color) !important;
+    font-size: 16px;
+    padding: 0 !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: var(--white-color) !important;
+}
+
+/* Mobile Social Links */
+.offcanvas-body .social-icon-item .social-link {
+    width: auto;
+    height: auto;
+    border-radius: 6px;
+    padding: 8px 20px !important;
+    justify-content: flex-start;
+    gap: 10px;
+}
 /************************************/
 /***         04. Hero css	      ***/
 /************************************/
